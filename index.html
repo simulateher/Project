@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arabische Lehnwörter Projekt</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <button id="aboutButton" class="about-button" onclick="showModal()">
+          Über Uns
+        </button>
+      </nav>
+      <div class="hero">
+        <div class="heading-wrapper">
+          <h1 class="heading">Lehnwörter im Arabischen</h1>
+          <h2 class="heading">قاموس الكلمات العربية ذات الأصل غير العربي</h2>
+          <p class="description">
+            Dieses Projekt wurde als interaktives Wörterbuch erdacht, um
+            arabische Wörter zu visualisieren, die aus anderen Sprachen entlehnt
+            wurden.
+          </p>
+        </div>
+        <div class="logo-wrapper">
+          <img class="logo" src="./public/logo.svg" />
+        </div>
+      </div>
+
+      <div class="filters">
+        <button id="showMapButton" class="map-button">
+          Weltkarte anzeigen
+        </button>
+        <select id="thematischeFilter">
+          <option value="">Thematische Kategorie wählen</option>
+        </select>
+        <select id="linguistischeFilter">
+          <option value="">Linguistische Kategorie wählen</option>
+        </select>
+        <select id="herkunftspracheFilter">
+          <option value="">Herkunftssprache wählen</option>
+        </select>
+      </div>
+      <div id="map" class="map-hidden"></div>
+    </header>
+    <main>
+      <div id="dataContainer"></div>
+      <!-- Über Uns Modal -->
+      <div id="aboutModal" class="modal">
+        <div class="modal-content">
+          <button id="closeModal" class="close" onClick="hideModal()">×</button>
+          <p>
+            Diese Website wurde im Rahmen des Abschlussprojekts des
+            Digital-Humanities-Kurses von Dr. Christian Casey im Sommersemester
+            2025 an der Freien Universität Berlin entwickelt. Sie dokumentiert
+            100 ausgewählte Lehnwörter, die aus verschiedenen Sprachen in das
+            Arabische übernommen wurden. Die Wörter lassen sich nach
+            thematischen und grammatikalischen Kategorien sowie nach ihrer
+            Herkunftssprache filtern. Zu jedem Eintrag sind weitere
+            Informationen verfügbar, darunter die Transkription, das
+            Ursprungswort, der Weg der Entlehnung, die IPA-Schreibweise und ein
+            kurzer historischer Kontext. Eine interaktive Karte visualisiert die
+            geographische Herkunft der Wörter und ermöglicht eine räumliche
+            Einordnung der Entlehnungen. Das Projekt wurde von Mehmet Eray Avcı,
+            Ali Assfour und Johanna Israel umgesetzt.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p class="copyright">2025, <i>alle Rechte vorbehalten</i></p>
+    </footer>
+    <!-- Leaflet JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
