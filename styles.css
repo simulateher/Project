@@ -14,7 +14,7 @@ header {
 
 .hero {
   display: flex;
-  padding: 0rem 4rem;
+  padding: 2rem 4rem;
   flex-direction: row;
   gap: 2rem;
   height: 100vh;
@@ -33,7 +33,13 @@ header {
 }
 
 .logo-wrapper {
+  padding: 2rem;
   width: 50%;
+  overflow: hidden;
+}
+
+.logo {
+  max-height: 70vh;
 }
 
 .description {
@@ -267,3 +273,199 @@ footer {
 
 /* Google Fonts için */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap");
+
+/* Responsive Design - Tablet */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 1rem 2rem;
+    height: auto;
+    min-height: 100vh;
+    gap: 1rem;
+  }
+
+  .heading-wrapper {
+    width: 100%;
+    max-width: none;
+  }
+
+  .logo-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .logo {
+    max-height: 50vh;
+  }
+
+  .heading {
+    text-align: center;
+    font-size: 2.2em;
+  }
+
+  .description {
+    text-align: center;
+    font-size: large;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  select {
+    min-width: 250px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #dataContainer {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    padding: 0 1rem;
+  }
+
+  .navbar {
+    padding: 1rem;
+  }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 480px) {
+  .hero {
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .logo-wrapper {
+    padding: 0.5rem;
+  }
+
+  .logo {
+    max-height: 40vh;
+  }
+
+  .heading {
+    font-size: 1.8em;
+  }
+
+  .description {
+    font-size: medium;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  .filters {
+    gap: 10px;
+  }
+
+  select {
+    min-width: 200px;
+    padding: 0.8rem;
+    font-size: 0.9em;
+  }
+
+  #dataContainer {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 0.5rem;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h2 {
+    font-size: 1.6em;
+  }
+
+  .modal-content {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .modal-content p {
+    font-size: 1em;
+  }
+
+  #map {
+    height: 300px;
+  }
+
+  .navbar {
+    padding: 0.5rem;
+  }
+
+  .about-button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}
+
+/* Responsive Design - Small Mobile */
+@media (max-width: 320px) {
+  .hero {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .logo-wrapper {
+    padding: 0.25rem;
+  }
+
+  .logo {
+    max-height: 30vh;
+  }
+
+  .heading {
+    font-size: 1.5em;
+  }
+
+  .description {
+    font-size: small;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.1em;
+  }
+
+  select {
+    min-width: 180px;
+    padding: 0.6rem;
+    font-size: 0.8em;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .card h2 {
+    font-size: 1.4em;
+  }
+
+  #map {
+    height: 250px;
+  }
+}
